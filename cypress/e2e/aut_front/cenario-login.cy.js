@@ -8,8 +8,13 @@ describe('Realizando testes de login', () => {
     })
 
   it('Autenticação realizada com sucesso', () => {
+    const user = Cypress.env('usuarioValido')
+    
     cy.newStep('Inserindo as credenciais de login')
-    cy.get('label').contains('Login').next().typeAndLog('admin')
+    cy.realizarLogin(user.login, user.senha)
+
+    cy.newStep('Verificando redirecionamento para a tela de início')
+    cy.verificarRedirecionamentoTelaInicio()
   })
 })
 })

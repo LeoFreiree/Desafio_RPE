@@ -1,5 +1,6 @@
 import './custom/actions/index'
 import './custom/tools/log'
+import './steps/index'
 
 // Import commands.js using ES2015 syntax:
 import './commands'

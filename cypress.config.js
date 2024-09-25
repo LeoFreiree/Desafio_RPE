@@ -5,8 +5,12 @@ module.exports = defineConfig({
   pageLoadTimeout: 60000,
   e2e: {
     setupNodeEvents(on, config) {
-      const envConfig = require('./cypress.env.json')
-      config.env = { ...config.env, ...envConfig }
+      const loginPageConfig = require('./cypress/config/front/login/loginPage.env.json')
+      config.env = { ...config.env, ...loginPageConfig }
+
+      const loginUserConfig = require ('./cypress/config/front/login/loginUser.env.json')
+      config.env = { ...config.env, ...loginUserConfig }
+
       return config
     },
   },

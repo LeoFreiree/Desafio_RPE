@@ -1,23 +1,10 @@
 import { removeAccents } from '../../../utils/utils'
 
 Cypress.Commands.add('clickAndLog', { prevSubject: 'element' }, (subject, options) => {
-    const selector = subject[0].localName
 
     if( options && options.scrollIntoView){
         cy.wrap(subject).scrollIntoView()
     }
-
-    if(selector != 'body'){
-        cy.wrap(subject).invoke('text')
-            .then($elementText => {
-                const name = options && options.name ? 
-                    `on "${options.name}" element` : 
-                    `on "${$elementText.trim()}" element`
-
-                selector ?
-                    cy.addContext(`clicking ${name} located at "${selector}"`) :
-                    cy.addContext(`clicking ${name}`)
-            })
 
         if(options && options.real){
             cy.wrap(subject).realClick()
@@ -25,10 +12,9 @@ Cypress.Commands.add('clickAndLog', { prevSubject: 'element' }, (subject, option
             cy.wrap(subject).click(options)
         }
     }
-})
+)
 
 Cypress.Commands.add('typeAndLog', { prevSubject: 'element' }, (subject, text, options) => {
-    const selector = subject[0].localName
     const content = options && options.sensitive ? '*'.repeat(text.length) : text
 
     if( options && options.scrollIntoView){
