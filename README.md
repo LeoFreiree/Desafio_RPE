@@ -88,8 +88,8 @@ Garantir que a aplicação esteja funcionando corretamente de acordo com a docum
     
 ## Resumo da execução dos testes
 
-Testes de Interface: total de 10 testes
-Teste de API: total de 7 testes
+Testes de Interface: total de 10 testes     
+Teste de API: total de 7 testes    
 Dados os cenarios de teste descritos acima, foram realizados um total de 17 testes automatizados, onde 14 testes passaram com sucesso e 3 testes falharam.
 
 ## Bugs encontrados
@@ -102,14 +102,14 @@ Dados os cenarios de teste descritos acima, foram realizados um total de 17 test
 
 ## Melhorias
 
-Teste de cadastro de cliente: Impedir o cadastro de cliente com cpf ja cadastrado
-Teste de Cadastro de cliente: Saldo está sendo exibido como double, melhorar a exibição para duas casas decimais
-Teste de Cadastro de cliente: Verificar uma quantidade minima de caracteres para o campo nome
+Teste de cadastro de cliente: Impedir o cadastro de cliente com cpf ja cadastrado    
+Teste de Cadastro de cliente: Saldo está sendo exibido como double, melhorar a exibição para duas casas decimais    
+Teste de Cadastro de cliente: Verificar uma quantidade minima de caracteres para o campo nome    
 
-Teste de listagem de clientes: Inserir dia na data de validade para listagem de clientes
+Teste de listagem de clientes: Inserir dia na data de validade para listagem de clientes    
 
-Teste de listagem de transações: Inserir uma validação para obrigação de informar um valor
-Teste de listagem de transações: Informar o saldo do cliente após a escolha do mesmo
+Teste de listagem de transações: Inserir uma validação para obrigação de informar um valor    
+Teste de listagem de transações: Informar o saldo do cliente após a escolha do mesmo    
 
 
 ## Autor
