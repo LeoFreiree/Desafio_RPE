@@ -75,17 +75,7 @@ Cypress.Commands.add('hoverAndLog', { prevSubject: 'element' }, (subject, option
     if( options && options.scrollIntoView){
         cy.wrap(subject).scrollIntoView()
     }
-    
-    if(selector != 'body'){
-        cy.wrap(subject).invoke('text')
-            .then($elementText => {
-                const elementText = $elementText ? `"${$elementText.trim()}"` : ""
-
-                selector ?
-                    cy.addContext(`hovering mouse on ${elementText} element located at "${selector}"`) :
-                    cy.addContext(`hovering mouse on ${elementText} element`)
-            })
 
         cy.wrap(subject).realHover(options)
     }
-})
+)

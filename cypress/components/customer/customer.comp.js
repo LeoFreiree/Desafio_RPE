@@ -1,0 +1,6 @@
+export const getName = () => cy.get('#nome')
+export const getCpf = () => cy.get('#cpf')
+export const getSaldo = () => cy.get('#saldoCliente')
+export const getFormActions = () => cy.get('.form-actions')
+export const getMessage = () => cy.get('#alertMessage')
+export const getForm = () => cy.get('#formIncluirAlterarCliente')
