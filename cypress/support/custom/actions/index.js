@@ -50,11 +50,6 @@ Cypress.Commands.add('selectAndLog', { prevSubject: 'element' }, (subject, conte
         cy.wrap(subject).scrollIntoView()
     }
 
-    if(selector != 'body'){
-        selector ?
-            cy.addContext(`selecting "${item}" option ${name} located at "${selector}"`):
-            cy.addContext(`selecting "${item}" option ${name}`)
-
         if(options && options.noSensitive){
             cy.wrap(subject)
                 .contains(content, {matchCase: false})
@@ -66,8 +61,7 @@ Cypress.Commands.add('selectAndLog', { prevSubject: 'element' }, (subject, conte
         else{
             cy.wrap(subject).select(content, options)
         }
-    }
-})
+    })
 
 Cypress.Commands.add('hoverAndLog', { prevSubject: 'element' }, (subject, options) => {
     const selector = subject[0].localName

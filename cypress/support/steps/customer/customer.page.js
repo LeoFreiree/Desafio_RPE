@@ -7,6 +7,7 @@ Cypress.Commands.add('addActiveCustomerOnForm', saldo => {
     customerPage.setName(name)
     customerPage.setCpf(cpf)
     customerPage.setSaldo(saldo)
+    return cy.wrap(`Teste ${name}`)
 })
 
 Cypress.Commands.add('clickActionOnFormAction', op => {

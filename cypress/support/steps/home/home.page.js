@@ -11,3 +11,9 @@ Cypress.Commands.add('selectAddCustomerOnNav', () => {
     Home.selectNav('Clientes')
     Home.clickNav('Incluir')
 })
+
+Cypress.Commands.add('selectAddSaleOnNav', () => {
+    Home.selectNav('QA')
+    Home.selectNav('Transações')
+    Home.clickSaleNav('Incluir')
+})
