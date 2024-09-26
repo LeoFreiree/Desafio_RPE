@@ -11,6 +11,9 @@ module.exports = defineConfig({
       const loginUserConfig = require ('./cypress/config/front/login/loginUser.env.json')
       config.env = { ...config.env, ...loginUserConfig }
 
+      const basePage = require ('./cypress/config/api/basePages.env.json')
+      config.env = { ...config.env, ...basePage }
+
       return config
     },
   },
