@@ -44,7 +44,7 @@ npx cypress run --spec cypress/e2e/aut_api/*.cy.js
 Somente os testes de backend
 
 ```bash
-npx cypress run --spec cypress/e2e/aut_web/*.cy.js
+npx cypress run --spec "cypress/e2e/aut_front/**/*.cy.js"
 ```
 
 ## Planos de Teste e estrategias
