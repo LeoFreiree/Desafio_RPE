@@ -28,6 +28,24 @@ npm install
 ```bash
 npx cypress open
 ```
+Após os passos acima, o Cypress será aberto e você poderá executar os testes na interface gráfica.
+
+Caso queira rodar os testes de frontend e backend sem a interface gráfica, execute o comando:
+
+```bash
+npx cypress run
+```
+Somente os testes de frontend
+    
+```bash
+npx cypress run --spec cypress/e2e/aut_api/*.cy.js
+```
+
+Somente os testes de backend
+
+```bash
+npx cypress run --spec cypress/e2e/aut_web/*.cy.js
+```
 
 ## Planos de Teste e estrategias
 
